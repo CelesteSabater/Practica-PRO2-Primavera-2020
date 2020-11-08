@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica PRO2: Fichero Fuente Proyecto/Species.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica PRO2
+   &#160;<span id="projectnumber">Celeste Sabater Andrade</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ece41f27c2a0af7a0c02f3da37347c08.html">Proyecto</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Species.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Species_8hh.html">Species.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classSpecies.html#ac545bdd8314a55704a04e0b6f4f1773c">    3</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSpecies.html#ac545bdd8314a55704a04e0b6f4f1773c">Species::start_species</a>(<span class="keywordtype">string</span> dna, <span class="keywordtype">int</span> k)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="comment">//this-&gt;name = name;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">    No esta el parametro name para la especie ya que implementandola me di cuenta que si queria </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">    usar un map en el conjunto de especies, usaria el nombre en el map, y seria redundante</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">    ponerlo tambien aqui.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">    Tambien podria haber usado un list en el conjunto en vez de un map y entonces meter el name</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">    aqui, pero me resulto mas sencillo hacer la clase con un map.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;dna = <a class="code" href="classSpecies.html#ad75b994410dff6120789e164f29bee0b">dna</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//creacion del kmer a continuacion</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classSpecies.html#ad75b994410dff6120789e164f29bee0b">dna</a>.size()+1-k; ++i){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        vector &lt;char&gt; v(k);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; k; ++j){</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            v[j] = <a class="code" href="classSpecies.html#ad75b994410dff6120789e164f29bee0b">dna</a>[i+j];</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">string</span> s(v.begin(), v.end());</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        map&lt;string, int&gt;::iterator it = <a class="code" href="classSpecies.html#a2bfdd7efcf990e3341271c271e10dd38">kmer</a>.find(s);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (it != <a class="code" href="classSpecies.html#a2bfdd7efcf990e3341271c271e10dd38">kmer</a>.end()) it -&gt; second += 1;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">else</span> <a class="code" href="classSpecies.html#a2bfdd7efcf990e3341271c271e10dd38">kmer</a>.insert(make_pair(s, 1));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classSpecies.html#a4ea20a76828d5209e60e5f0eb4ccce24">   27</a></span>&#160;<span class="keywordtype">string</span> <a class="code" href="classSpecies.html#a4ea20a76828d5209e60e5f0eb4ccce24">Species::get_dna</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSpecies.html#ad75b994410dff6120789e164f29bee0b">dna</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">string Species::get_name()</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">{</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">    return name;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classSpecies.html#a3384086c368c2cbace230bffcac92939">   37</a></span>&#160; map&lt;string, int&gt; <a class="code" href="classSpecies.html#a3384086c368c2cbace230bffcac92939">Species::get_kmer</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword"> </span>{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;     <span class="keywordflow">return</span> <a class="code" href="classSpecies.html#a2bfdd7efcf990e3341271c271e10dd38">kmer</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassSpecies_html_a4ea20a76828d5209e60e5f0eb4ccce24"><div class="ttname"><a href="classSpecies.html#a4ea20a76828d5209e60e5f0eb4ccce24">Species::get_dna</a></div><div class="ttdeci">string get_dna() const</div><div class="ttdef"><b>Definition:</b> <a href="Species_8cc_source.html#l00027">Species.cc:27</a></div></div>
+<div class="ttc" id="aclassSpecies_html_ad75b994410dff6120789e164f29bee0b"><div class="ttname"><a href="classSpecies.html#ad75b994410dff6120789e164f29bee0b">Species::dna</a></div><div class="ttdeci">string dna</div><div class="ttdef"><b>Definition:</b> <a href="Species_8hh_source.html#l00038">Species.hh:38</a></div></div>
+<div class="ttc" id="aclassSpecies_html_ac545bdd8314a55704a04e0b6f4f1773c"><div class="ttname"><a href="classSpecies.html#ac545bdd8314a55704a04e0b6f4f1773c">Species::start_species</a></div><div class="ttdeci">void start_species(string dna, int k)</div><div class="ttdoc">Es la generadora.</div><div class="ttdef"><b>Definition:</b> <a href="Species_8cc_source.html#l00003">Species.cc:3</a></div></div>
+<div class="ttc" id="aclassSpecies_html_a2bfdd7efcf990e3341271c271e10dd38"><div class="ttname"><a href="classSpecies.html#a2bfdd7efcf990e3341271c271e10dd38">Species::kmer</a></div><div class="ttdeci">map&lt; string, int &gt; kmer</div><div class="ttdef"><b>Definition:</b> <a href="Species_8hh_source.html#l00039">Species.hh:39</a></div></div>
+<div class="ttc" id="aSpecies_8hh_html"><div class="ttname"><a href="Species_8hh.html">Species.hh</a></div><div class="ttdoc">Es la clase usada para una especie y contiene todas sus funciones y utilidades.</div></div>
+<div class="ttc" id="aclassSpecies_html_a3384086c368c2cbace230bffcac92939"><div class="ttname"><a href="classSpecies.html#a3384086c368c2cbace230bffcac92939">Species::get_kmer</a></div><div class="ttdeci">map&lt; string, int &gt; get_kmer() const</div><div class="ttdef"><b>Definition:</b> <a href="Species_8cc_source.html#l00037">Species.cc:37</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

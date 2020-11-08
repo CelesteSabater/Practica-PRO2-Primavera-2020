@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Práctica PRO2: Fichero Fuente Proyecto/Set_Cluster.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Práctica PRO2
+   &#160;<span id="projectnumber">Celeste Sabater Andrade</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_ece41f27c2a0af7a0c02f3da37347c08.html">Proyecto</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Set_Cluster.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Set__Cluster_8hh.html">Set_Cluster.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*private functions*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#ae7b9f6cdaf67d7833c40c218fd2bfe86">    7</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSet__Cluster.html#ae7b9f6cdaf67d7833c40c218fd2bfe86">Set_Cluster::print</a>(<span class="keyword">const</span> <a class="code" href="classBinTree.html">BinTree&lt;nodo&gt;</a>&amp; cluster)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">if</span> (not cluster.empty())</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="classBinTree.html">BinTree&lt;nodo&gt;</a> a = cluster.left();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">if</span> (not a.empty())</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;[(&quot;</span> &lt;&lt; cluster.value().<a class="code" href="structnodo.html#a3188a3772477f2cb0913b4a9dd715f30">name</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; cluster.value().<a class="code" href="structnodo.html#a85c517007b1e6ae0e4c1b52468b8ea50">longitud</a> &lt;&lt; <span class="stringliteral">&quot;) &quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <a class="code" href="classSet__Cluster.html#ae7b9f6cdaf67d7833c40c218fd2bfe86">print</a>(a);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="classSet__Cluster.html#ae7b9f6cdaf67d7833c40c218fd2bfe86">print</a>(cluster.right());</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;]&#39;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="comment">//si no tiene un hijo izquierdo, quiere decir que es una raiz</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39;[&#39;</span> &lt;&lt; cluster.value().<a class="code" href="structnodo.html#a3188a3772477f2cb0913b4a9dd715f30">name</a> &lt;&lt; <span class="charliteral">&#39;]&#39;</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#a6fc96b2287668391636cf54094767d79">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSet__Cluster.html#a6fc96b2287668391636cf54094767d79">Set_Cluster::eliminar_todo</a>()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.empty())</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.erase(<a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.begin());</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">/*main functions*/</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#a3b0553cf307e40ffc89e3fdc7329c959">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSet__Cluster.html#a3b0553cf307e40ffc89e3fdc7329c959">Set_Cluster::start_cluster</a>(<span class="keyword">const</span> map&lt;string, Species&gt;&amp; ssp, <span class="keyword">const</span> Matrix&amp; distancia)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="classSet__Cluster.html#a6fc96b2287668391636cf54094767d79">eliminar_todo</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a> = distancia;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    map&lt;string, Species&gt;::const_iterator it;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">for</span> (it = ssp.begin(); it != ssp.end(); ++it)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classCluster.html">Cluster</a> hey;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        hey.<a class="code" href="classCluster.html#a86be2dd93db4768de3cea57d7a380ee7">new_cluster1</a>(it -&gt; first);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.insert(<a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.end(), hey);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#a951276f9a4ef79bffbac2d36207b365d">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSet__Cluster.html#a951276f9a4ef79bffbac2d36207b365d">Set_Cluster::step_wpgma</a>()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//buscamos donde estan las dos especies mas proximas</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> n = <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>.size();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//pongo un numero mas alto al maximo para que ya el primero sea considerado el menor</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">double</span> min = 101;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//el first sera la &#39;i&#39; y el second la &#39;j&#39;</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    pair &lt;int, int&gt; posicion;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i){</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> aux = i + 1;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = aux; j &lt; n; ++j){</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][j] &lt; min)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                min = <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][j];</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                posicion.first = i;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                posicion.second = j;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    list&lt;Cluster&gt;::iterator it1 = <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.begin();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    list&lt;Cluster&gt;::iterator it2 = <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.begin();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">int</span> pos1, pos2;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    pos1 = posicion.first;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    pos2 = posicion.second;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; pos1; ++i) ++it1;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; pos2; ++i) ++it2;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="classCluster.html">Cluster</a> nombre_generico;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//añadimos la especie nueva</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    nombre_generico.<a class="code" href="classCluster.html#aa0a4b17c0bdfa0247e49244e9b27fb05">new_cluster2</a>(it1 -&gt; get_bintree(), it2 -&gt; get_bintree(), min/2);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.insert(it1, nombre_generico);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//eliminamos las especies antiguas</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.erase(it1);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.erase(it2);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//ahora actualizamos la matriz de distancia, no se me ha ocurrido otra forma de hacerlo </span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">//que con este gran sistema de ifs, espero que los comentarios ayuden a entender como funciona</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    Matrix nueva (n-1, Fila(n-1));</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="comment">//estos bools sirven de marcadores por si nos pasamos de la posicion de las dos especies eliminiadas</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">bool</span> pasadoj = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> pasadoi = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">//dos fors para hacer un recorrido de matriz</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; nueva.size(); ++i)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">int</span> aux = i + 1;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">//si j (que sera aux) es mayor a pos2 (la posicion en la matriz de la segunda especie)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="comment">//ponemos en true el marcador de j, si no, lo devolvemos a false, ya que puede ponerse </span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="comment">//en true dentro del segundo for</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">if</span> (aux &lt;= pos2) pasadoj = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">else</span> pasadoj = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="comment">//si i es igual a pos2, el marcador de i se pone en true, esto quiere decir que pasamos</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">//por la fila de la segunda especie</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">if</span> (i == pos2) pasadoi = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = aux; j &lt; nueva.size(); ++j)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">if</span> (j == pos2) pasadoj = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">//si i y j son distintas a pos1, simplemente hay que coger</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">//los valores de la matriz original sin hacer calculos</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">if</span> (i!=pos1 &amp;&amp; j!=pos1)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                <span class="keywordflow">if</span> (!pasadoi)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    <span class="keywordflow">if</span> (!pasadoj) nueva[i][j] = <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][j];</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="comment">//si es cierto el marcador de j, quiere decir que el valor </span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="comment">//que buscamos de la nueva matriz esta en una posicion adelante en j </span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    <span class="comment">//dentro de la matriz antigua</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    <span class="keywordflow">else</span> nueva[i][j] = <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][j+1];</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <span class="comment">//si es cierto el marcador de i, quiere decir que el valor </span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="comment">//que buscamos de la nueva matriz esta en una posicion adelante en i</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="comment">//dentro de la matriz antigua</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    <span class="keywordflow">if</span> (!pasadoj) nueva[i][j] = <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i+1][j];</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                    <span class="keywordflow">else</span> nueva[i][j] = <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i+1][j+1];</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="comment">//en este caso tenemos la fila de la primera especie, haremos la media</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">//entre la distancia de la especie1 con &#39;x&#39; y la distancia entre la especie2 con &#39;x&#39;</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (i == pos1)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="keywordflow">if</span> (!pasadoj) nueva[i][j] = (<a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][j] + <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[j][pos2])/2;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="comment">//lo mismo de antes, si es cierto el marcador de j, buscaremos el</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <span class="comment">//valor en la vieja matriz con j+1</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <span class="keywordflow">else</span> nueva[i][j] = (<a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][j+1] + <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[pos2][j+1])/2;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            }</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="comment">//si j es la fila de la especie1, calcularemos la media de esta posicion y la posicion de la</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <span class="comment">//segunda especie, no hay un caso por si el maracador de j es cierto, porque no hay un caso</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="comment">//posible para esto, ya que siempre especie1 &lt; especie2 (en posicion de la matriz)</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="comment">//if (j == pos1)</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <span class="keywordflow">else</span> nueva[i][j] = (<a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][pos1] + <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][pos2])/2;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a> = nueva;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#a12b027b48e422de28680c816be8f5775">  147</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="classSet__Cluster.html#a12b027b48e422de28680c816be8f5775">Set_Cluster::step_wpgma_is_printable</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.size() &gt; 1;    </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#aeff9c001cc8b56a374e33ef189074b2d">  152</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSet__Cluster.html#aeff9c001cc8b56a374e33ef189074b2d">Set_Cluster::print_cluster</a>(<span class="keywordtype">string</span> name)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    list&lt;Cluster&gt;::const_iterator it = <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.begin();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">while</span> ((it != <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.end()) and (it-&gt;get_name() != name))</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        ++it;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span> (it == <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.end())</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;ERROR: El cluster &quot;</span> &lt;&lt;  name &lt;&lt; <span class="stringliteral">&quot; no existe.&quot;</span>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="comment">//la funcion usada a continuacion esta en la parte de funciones privadas</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="classSet__Cluster.html#ae7b9f6cdaf67d7833c40c218fd2bfe86">print</a>(it -&gt; get_bintree());</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#a9061330ac31f42f8740d8e469478bfa0">  165</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSet__Cluster.html#a9061330ac31f42f8740d8e469478bfa0">Set_Cluster::print_matrix_dist</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">int</span> i = -1;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    list&lt;Cluster&gt;::const_iterator it1;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    list&lt;Cluster&gt;::const_iterator it2;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">for</span> (it1 = <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.begin(); it1 != <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.end(); ++it1){</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        cout &lt;&lt; it1 -&gt; get_name() &lt;&lt; <span class="charliteral">&#39;:&#39;</span> ;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        ++i;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordtype">int</span> j = i + 1;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        list&lt;Cluster&gt;::const_iterator aux = it1;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        ++aux;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">for</span> (it2 = aux; it2 != <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.end(); ++it2){</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; it2 -&gt; get_name() &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; <span class="charliteral">&#39;(&#39;</span> &lt;&lt; <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>[i][j] &lt;&lt; <span class="charliteral">&#39;)&#39;</span>;    </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            ++j;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno"><a class="line" href="classSet__Cluster.html#a1225861f2726eb1dd6afbf0083610952">  184</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classSet__Cluster.html#a1225861f2726eb1dd6afbf0083610952">Set_Cluster::print_filogen_tree</a>(<span class="keyword">const</span> map&lt;string, Species&gt;&amp; ssp, <span class="keyword">const</span> Matrix&amp; distancia)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="classSet__Cluster.html#a3b0553cf307e40ffc89e3fdc7329c959">start_cluster</a>(ssp, distancia);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (! <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.empty())</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordtype">int</span> n = <a class="code" href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">dist</a>.size();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n-1; ++i)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <a class="code" href="classSet__Cluster.html#a951276f9a4ef79bffbac2d36207b365d">step_wpgma</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        list&lt;Cluster&gt;::const_iterator it = <a class="code" href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">set_cluster</a>.begin();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="classSet__Cluster.html#ae7b9f6cdaf67d7833c40c218fd2bfe86">print</a>(it -&gt; get_bintree());</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">else</span> cout &lt;&lt; <span class="stringliteral">&quot;ERROR: El conjunto de clusters es vacio.&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassSet__Cluster_html_a8971efbfbabb89d19bcf663e09ff312d"><div class="ttname"><a href="classSet__Cluster.html#a8971efbfbabb89d19bcf663e09ff312d">Set_Cluster::set_cluster</a></div><div class="ttdeci">list&lt; Cluster &gt; set_cluster</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8hh_source.html#l00034">Set_Cluster.hh:34</a></div></div>
+<div class="ttc" id="aSet__Cluster_8hh_html"><div class="ttname"><a href="Set__Cluster_8hh.html">Set_Cluster.hh</a></div><div class="ttdoc">Es la clase conjunto cluster y contiene todas sus funciones y utilidades.</div></div>
+<div class="ttc" id="aclassSet__Cluster_html_a9061330ac31f42f8740d8e469478bfa0"><div class="ttname"><a href="classSet__Cluster.html#a9061330ac31f42f8740d8e469478bfa0">Set_Cluster::print_matrix_dist</a></div><div class="ttdeci">void print_matrix_dist() const</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00165">Set_Cluster.cc:165</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_a1225861f2726eb1dd6afbf0083610952"><div class="ttname"><a href="classSet__Cluster.html#a1225861f2726eb1dd6afbf0083610952">Set_Cluster::print_filogen_tree</a></div><div class="ttdeci">void print_filogen_tree(const map&lt; string, Species &gt; &amp;ssp, const Matrix &amp;distancia)</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00184">Set_Cluster.cc:184</a></div></div>
+<div class="ttc" id="astructnodo_html_a3188a3772477f2cb0913b4a9dd715f30"><div class="ttname"><a href="structnodo.html#a3188a3772477f2cb0913b4a9dd715f30">nodo::name</a></div><div class="ttdeci">string name</div><div class="ttdef"><b>Definition:</b> <a href="Cluster_8hh_source.html#l00029">Cluster.hh:29</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_a6fc96b2287668391636cf54094767d79"><div class="ttname"><a href="classSet__Cluster.html#a6fc96b2287668391636cf54094767d79">Set_Cluster::eliminar_todo</a></div><div class="ttdeci">void eliminar_todo()</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00025">Set_Cluster.cc:25</a></div></div>
+<div class="ttc" id="aclassCluster_html_a86be2dd93db4768de3cea57d7a380ee7"><div class="ttname"><a href="classCluster.html#a86be2dd93db4768de3cea57d7a380ee7">Cluster::new_cluster1</a></div><div class="ttdeci">void new_cluster1(string name)</div><div class="ttdef"><b>Definition:</b> <a href="Cluster_8cc_source.html#l00003">Cluster.cc:3</a></div></div>
+<div class="ttc" id="aclassCluster_html"><div class="ttname"><a href="classCluster.html">Cluster</a></div><div class="ttdoc">Es la clase encargada de gestionar un unico cluster.</div><div class="ttdef"><b>Definition:</b> <a href="Cluster_8hh_source.html#l00033">Cluster.hh:33</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_ad7ea6d6d50190e6904457dcb0ebbbea5"><div class="ttname"><a href="classSet__Cluster.html#ad7ea6d6d50190e6904457dcb0ebbbea5">Set_Cluster::dist</a></div><div class="ttdeci">Matrix dist</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8hh_source.html#l00035">Set_Cluster.hh:35</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_a951276f9a4ef79bffbac2d36207b365d"><div class="ttname"><a href="classSet__Cluster.html#a951276f9a4ef79bffbac2d36207b365d">Set_Cluster::step_wpgma</a></div><div class="ttdeci">void step_wpgma()</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00052">Set_Cluster.cc:52</a></div></div>
+<div class="ttc" id="aclassCluster_html_aa0a4b17c0bdfa0247e49244e9b27fb05"><div class="ttname"><a href="classCluster.html#aa0a4b17c0bdfa0247e49244e9b27fb05">Cluster::new_cluster2</a></div><div class="ttdeci">void new_cluster2(const BinTree&lt; nodo &gt; &amp;tree1, const BinTree&lt; nodo &gt; &amp;tree2, double distance)</div><div class="ttdoc">Es una generadora que combina dos BinTree.</div><div class="ttdef"><b>Definition:</b> <a href="Cluster_8cc_source.html#l00010">Cluster.cc:10</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_aeff9c001cc8b56a374e33ef189074b2d"><div class="ttname"><a href="classSet__Cluster.html#aeff9c001cc8b56a374e33ef189074b2d">Set_Cluster::print_cluster</a></div><div class="ttdeci">void print_cluster(string name) const</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00152">Set_Cluster.cc:152</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_a12b027b48e422de28680c816be8f5775"><div class="ttname"><a href="classSet__Cluster.html#a12b027b48e422de28680c816be8f5775">Set_Cluster::step_wpgma_is_printable</a></div><div class="ttdeci">bool step_wpgma_is_printable() const</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00147">Set_Cluster.cc:147</a></div></div>
+<div class="ttc" id="astructnodo_html_a85c517007b1e6ae0e4c1b52468b8ea50"><div class="ttname"><a href="structnodo.html#a85c517007b1e6ae0e4c1b52468b8ea50">nodo::longitud</a></div><div class="ttdeci">double longitud</div><div class="ttdef"><b>Definition:</b> <a href="Cluster_8hh_source.html#l00030">Cluster.hh:30</a></div></div>
+<div class="ttc" id="aclassBinTree_html"><div class="ttname"><a href="classBinTree.html">BinTree&lt; nodo &gt;</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_ae7b9f6cdaf67d7833c40c218fd2bfe86"><div class="ttname"><a href="classSet__Cluster.html#ae7b9f6cdaf67d7833c40c218fd2bfe86">Set_Cluster::print</a></div><div class="ttdeci">void print(const BinTree&lt; nodo &gt; &amp;cluster) const</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00007">Set_Cluster.cc:7</a></div></div>
+<div class="ttc" id="aclassSet__Cluster_html_a3b0553cf307e40ffc89e3fdc7329c959"><div class="ttname"><a href="classSet__Cluster.html#a3b0553cf307e40ffc89e3fdc7329c959">Set_Cluster::start_cluster</a></div><div class="ttdeci">void start_cluster(const map&lt; string, Species &gt; &amp;ssp, const Matrix &amp;distancia)</div><div class="ttdef"><b>Definition:</b> <a href="Set__Cluster_8cc_source.html#l00037">Set_Cluster.cc:37</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
